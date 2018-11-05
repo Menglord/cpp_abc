@@ -1,0 +1,2 @@
+include_directories(./dynamic_memory)
+add_subdirectory(dynamic_memory)
