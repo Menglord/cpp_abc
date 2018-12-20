@@ -1,6 +1,7 @@
 .cproject
 .metadata
 .project
-./.settiings/*
+.settings
+Debug
 build
 devel

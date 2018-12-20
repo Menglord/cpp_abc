@@ -29,6 +29,11 @@ int main(int argc, char** argv) {
 	{
 		A* a = new A(3);
 		std::shared_ptr<A> aptr;
-		aptr.reset(a);
+		std::shared_ptr<A> aptr01(a);
+		std::cout << "aptr.use_count() = " << aptr.use_count() << '\n';
+		std::cout << "aptr01.use_count() = " << aptr01.use_count() << '\n';
+		aptr = aptr01;
+		std::cout << "aptr.use_count() = " << aptr.use_count() << '\n';
+		std::cout << "aptr01.use_count() = " << aptr01.use_count() << '\n';
 	}
 }
